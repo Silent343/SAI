@@ -14,6 +14,9 @@ body{
     overflow-x: hidden;
 }
 
+:root{
+        --darkBlue: #101022;
+}
 
 /*navegtion bar*/
 
@@ -27,6 +30,10 @@ header{
     height: 11.5%;
     z-index: 1000;
     transition: 0.6s;
+}
+
+.btns{
+    display: none;
 }
 
 .log-cnt_rw{
@@ -59,7 +66,7 @@ header{
     border-radius: 9vh;
     width: 100%;
     margin-left: -5px;
-    height: 70%;
+    height: 65%;
 }
 
 .nav_bar{
@@ -257,4 +264,152 @@ header{
     font-size: 12px;
     opacity: 80%;
     color: #5a5656;
+}
+
+
+
+/*Phone capacity*/
+
+@media (max-width: 768px){
+    .btns{
+        display: block;
+    }
+
+    .nav_bar .first-list span{
+        display: none;
+    }
+
+    .nav-container{
+        height: 90px;
+    }
+
+    .nav-container .log-cnt_rw{
+        width: 30%;
+    }
+
+    .nav-container .log-cnt_rw img{
+        width: 200%;
+    }
+
+    .nav-container .log-cnt_rw .logo_ttl{
+        position: relative;
+        left: 100%;
+    }
+
+
+    .nav-container .nav_bar .btns{
+        height: 100%;
+        width: 100px;
+        font-size: 200%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_bar .first-list{
+        background-color: #5292a5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        left: 100%;
+        margin: 0;
+        width: 100%;
+        position: fixed;
+        height: calc(100% - 90px);
+        top: 90px;
+
+        transition: left 0.3s;
+    }
+
+    .sticky .img-logo{
+        width: 75%;
+        margin-left: -5px;
+    }
+
+
+    /*/***/
+
+    .txtProf{
+        font-size: 100%;
+        text-align: start;
+        width: 60%;
+        top: 15%;
+    }
+
+    .txtProf h1{
+        font-size: 450%;
+    }
+
+    .profileBox img{
+        position: absolute;
+        left: -40%;
+        width: 140%;
+    }
+
+    .footertxt{
+        position: absolute;
+        bottom: 3%;
+        right: 2%;
+        z-index: 100;
+        width: 60%;
+    }
+    
+    .footertxt h4{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 105%;
+    }
+
+    .wave1{
+        width: 105%;
+        right: 0;
+        opacity: 85%;
+    }
+
+    /*/*//****//***/
+
+
+    .footer-ctn .footer-ctn_hdr .ftr_hdr_terms li{
+        margin-left: 10%;
+        padding: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer-ctn .info-ctn .nameApp{
+        margin: 2.5% 0 2.5% 0;
+    }
+    
+    .footer-ctn .info-ctn .app_lst-ctn ul li{
+        font-size: 180%;
+        margin: 0 1.5% 1.5% 2%;
+    }
+
+    .footer-ctn .info-ctn .app_lst-ctn {
+        margin-bottom: 2.5%;
+    }
+    
+    .footer-ctn .info-ctn .dnwl_app-ctn ul li{
+        list-style: none;
+        display: inline-block;
+    }
+    
+    .footer-ctn .info-ctn .dnwl_app-ctn ul li img{
+        width: 120px;
+    }
+    
+    .footer-ctn .info-ctn .end_ftr{
+        font-size: 12px;
+        opacity: 80%;
+        color: #5a5656;
+    }
+}
+
+.blockft{
+    display: block;
+    left: 0!important;
+}
+
+.bckScroll{
+    background-color: rgb(65, 92, 167);
+
 }

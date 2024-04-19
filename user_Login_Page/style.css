@@ -29,6 +29,10 @@ header{
     transition: 0.6s;
 }
 
+.btns{
+    display: none;
+}
+
 .log-cnt_rw{
     display: flex;
     flex-direction: row;
@@ -100,7 +104,6 @@ main{
     width: 100vw;
     height: 91.5vh;
     margin-top: 4%;
-    z-index: 100000;
 }
 
 .login-ctn{
@@ -256,4 +259,113 @@ main{
     height: 60%;
     bottom: 0;
     right: 0;
+}
+
+
+
+@media (max-width: 768px){
+    .btns{
+        display: block;
+    }
+
+    .nav_bar .first-list span{
+        display: none;
+    }
+
+    .nav-container{
+        height: 90px;
+    }
+
+    .nav-container .log-cnt_rw{
+        width: 30%;
+    }
+
+    .nav-container .log-cnt_rw img{
+        width: 200%;
+    }
+
+    .nav-container .log-cnt_rw .logo_ttl{
+        position: relative;
+        left: 100%;
+    }
+
+
+    .nav-container .nav_bar .btns{
+        height: 100%;
+        width: 100px;
+        font-size: 200%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_bar .first-list{
+        background-color: #5292a5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        left: 100%;
+        margin: 0;
+        width: 100%;
+        position: fixed;
+        height: calc(100% - 90px);
+        top: 90px;
+
+        transition: left 0.3s;
+    }
+
+    .sticky .img-logo{
+        width: 75%;
+        margin-left: -5px;
+    }
+
+
+    /*/***/
+
+    
+    main{
+        height: 80vh;
+        margin-top: 90px;
+    }
+
+    .login-ctn{
+        width: 100%;
+    }
+
+    .login-ctn .img_frm-ctn img{
+        width: 20%;
+    }
+
+    .formCnt .user-box input:focus ~ label,
+    .formCnt .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #03e9f4;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+
+
+    /***********************//**************/
+    .img_medic-cnt{
+        width: 50%;
+        height: 30%;
+        bottom: 0;
+        right: -1%;
+    }
+
+    
+}
+
+.blockft{
+    display: block;
+    left: 0!important;
+}
+
+.bckScroll{
+    background-color: rgb(65, 92, 167);
+
 }

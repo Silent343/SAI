@@ -29,6 +29,10 @@ header{
     transition: 0.6s;
 }
 
+.btns{
+    display: none;
+}
+
 .log-cnt_rw{
     display: flex;
     flex-direction: row;
@@ -59,7 +63,7 @@ header{
     border-radius: 9vh;
     width: 100%;
     margin-left: -5px;
-    height: 70%;
+    height: 65%;
 }
 
 .nav_bar{
@@ -111,6 +115,7 @@ header{
 .contact-cnt{
     margin-top: 5.5%;
     margin-bottom: 6%;
+    height: 400vh;
 }
 
 .contact .txt_cntct{
@@ -150,7 +155,7 @@ header{
 }
 
 .cntct_employs ul li .firstCntct_info{
-    background-color: #97e7d3;
+    background-color: #7aaa9e;
     width: 70%;
     height: 25pc; 
     position: relative;
@@ -160,7 +165,58 @@ header{
     border-radius: 20px;
     flex-grow: 1;
 
-    box-shadow:  -2px 2px 17px #222;
+    box-shadow:  -3px 3px 1px #494747;
+
+}
+
+.contact-cnt .contact .cntct_employs ul li div .img_ctn{
+    height: 20%;
+    text-align: center;
+}
+
+.contact-cnt .contact .cntct_employs ul li div img{
+    height: 120%;
+    width: 40%;
+    position: relative;
+    border-radius: 50%;
+    top: -50%;
+    border: 1.5px solid #000;
+    overflow: hidden;
+}
+
+
+.contact-cnt .contact .cntct_employs ul li div .redes_Detail {
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0.6pc;
+    position: relative;
+    top: 6px;
+    border-radius: 0 0 20px 20px;
+}
+
+.contact-cnt .contact .cntct_employs ul li div .ext_Detail{
+    height: 50%;
+    font-size: 95%;
+    padding: 10px;
+    text-align: justify;
+    letter-spacing: 0.5px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.cntct_employs ul li .sndCntct_info{
+    background-color: #97e7d3;
+    background-color: #7aaa9e;
+    width: 70%;
+    height: 25pc; 
+    position: relative;
+    top: -5pc;
+    margin: auto;
+    padding: 1.5%;
+    border-radius: 20px;
+
+    box-shadow:  -3px 3px 1px #494747;
 
     .img_ctn{
         height: 20%;
@@ -173,40 +229,22 @@ header{
         position: relative;
         border-radius: 50%;
         top: -50%;
-        border: 2px solid #000;
+        border: 1.5px solid #000;
         overflow: hidden;
     }
 
-    .ext_Detail{
-        height: 50%;
-        text-align: justify;
+    .img_ctn img::before{
+        content: " ";
+        background-color: #0000ff;
+        width: 10px;
+        height: 10px;
     }
-
-    .redes_Detail {
-        text-align: center;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-    }
-
-}
-
-
-.cntct_employs ul li .sndCntct_info{
-    background-color: #97e7d3;
-    width: 70%;
-    height: 25pc; 
-    position: relative;
-    top: -5pc;
-    margin: auto;
-    padding: 1.5%;
-    border-radius: 20px;
-
-    box-shadow:  -2px 2px 17px #222;
 }
 
 
 .cntct_employs ul li .thrtCntct_info{
     background-color: #97e7d3;
+    background-color: #7aaa9e;
     width: 70%;
     height: 25pc; 
     position: relative;
@@ -215,11 +253,13 @@ header{
     padding: 1.5%;
     border-radius: 20px;
     
-    box-shadow:  -2px 2px 17px #222;
+    box-shadow:  -3px 3px 1px #494747;
+
 }
 
 .cntct_employs ul li .frthCntct_info{
     background-color: #97e7d3;
+    background-color: #7aaa9e;
     width: 70%;
     height: 25pc; 
     position: relative;
@@ -228,11 +268,13 @@ header{
     padding: 1.5%;
     border-radius: 20px;
 
-    box-shadow:  -2px 2px 17px #222;
+    box-shadow:  -3px 3px 1px #494747;
+
 }
 
 .cntct_employs ul li .ffthCntct_info{
     background-color: #97e7d3;
+    background-color: #7aaa9e;
     width: 70%;
     height: 25pc; 
     position: relative;
@@ -241,11 +283,13 @@ header{
     padding: 1.5%;
     border-radius: 20px;
 
-    box-shadow:  -2px 2px 17px #222;
+    box-shadow:  -3px 3px 1px #494747;
+
 }
 
 .cntct_employs ul li .sxthCntct_info{
     background-color: #97e7d3;
+    background-color: #7aaa9e;
     width: 70%;
     height: 25pc; 
     position: relative;
@@ -254,7 +298,8 @@ header{
     padding: 1.5%;
     border-radius: 20px;
 
-    box-shadow:  -2px 2px 17px #222;
+    box-shadow:  -3px 3px 1px #494747;
+
 }
 
 
@@ -363,4 +408,125 @@ header{
     font-size: 12px;
     opacity: 80%;
     color: #5a5656;
+}
+
+
+
+
+/*Phone capacity*/
+
+@media (max-width: 768px){
+    .btns{
+        display: block;
+    }
+
+    .nav_bar .first-list span{
+        display: none;
+    }
+
+    .nav-container{
+        height: 90px;
+    }
+
+    .nav-container .log-cnt_rw{
+        width: 30%;
+    }
+
+    .nav-container .log-cnt_rw img{
+        width: 200%;
+    }
+
+    .nav-container .log-cnt_rw .logo_ttl{
+        position: relative;
+        left: 100%;
+    }
+
+
+    .nav-container .nav_bar .btns{
+        height: 100%;
+        width: 100px;
+        font-size: 200%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_bar .first-list{
+        background-color: #5292a5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        left: 100%;
+        margin: 0;
+        width: 100%;
+        position: fixed;
+        height: calc(100% - 90px);
+        top: 90px;
+
+        transition: left 0.3s;
+    }
+
+    .sticky .img-logo{
+        width: 75%;
+        margin-left: -5px;
+    }
+
+
+    /*/***/
+
+    .contact-cnt{
+        margin-top: 20%;
+    }
+
+    .contact-cnt .contact .cntct_employs .cntct_emp_lst {
+        grid-template-columns: auto;
+        row-gap: 6%;
+}
+
+    /*/*//****//***/
+
+    .footer-ctn .footer-ctn_hdr .ftr_hdr_terms li{
+        margin-left: 10%;
+        padding: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer-ctn .info-ctn .nameApp{
+        margin: 2.5% 0 2.5% 0;
+    }
+    
+    .footer-ctn .info-ctn .app_lst-ctn ul li{
+        font-size: 180%;
+        margin: 0 1.5% 1.5% 2%;
+    }
+
+    .footer-ctn .info-ctn .app_lst-ctn {
+        margin-bottom: 2.5%;
+    }
+    
+    .footer-ctn .info-ctn .dnwl_app-ctn ul li{
+        list-style: none;
+        display: inline-block;
+    }
+    
+    .footer-ctn .info-ctn .dnwl_app-ctn ul li img{
+        width: 120px;
+    }
+    
+    .footer-ctn .info-ctn .end_ftr{
+        font-size: 12px;
+        opacity: 80%;
+        color: #5a5656;
+    }
+}
+
+.blockft{
+    display: block;
+    left: 0!important;
+}
+
+.bckScroll{
+    background-color: rgb(65, 92, 167);
+
 }

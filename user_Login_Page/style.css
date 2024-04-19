@@ -27,6 +27,7 @@ header{
     height: 8.5%;
     z-index: 1000;
     transition: 0.6s;
+    z-index: 10000000;
 }
 
 .btns{
@@ -240,7 +241,7 @@ main{
     bottom: 1%;
     left: 1%;
     font-weight: bolder;
-    z-index: 100000;
+    z-index: 10000;
 }
 
 .terms-ctn a{
@@ -259,6 +260,7 @@ main{
     height: 60%;
     bottom: 0;
     right: 0;
+    z-index: -10000;
 }
 
 
@@ -358,6 +360,28 @@ main{
     }
 
     
+}
+
+
+@media (max-width: 360px){
+
+    .btn_frm-ctn button{
+        width: 50%;
+        height: 3pc;
+        border-radius: 20px;
+        border-color: transparent;
+        background-color: rgb(24, 155, 116);
+    }
+
+    /*/*//****//***/
+
+
+    .footer-ctn .footer-ctn_hdr .ftr_hdr_terms li{
+        margin-left: 3%;
+        padding: 10px;
+        padding-bottom: 10px;
+    }
+
 }
 
 .blockft{

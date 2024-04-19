@@ -115,7 +115,6 @@ header{
 .contact-cnt{
     margin-top: 5.5%;
     margin-bottom: 6%;
-    height: 400vh;
 }
 
 .contact .txt_cntct{
@@ -477,49 +476,46 @@ header{
 
     .contact-cnt{
         margin-top: 20%;
+        height: 400vh;
     }
 
     .contact-cnt .contact .cntct_employs .cntct_emp_lst {
         grid-template-columns: auto;
         row-gap: 6%;
-}
+    }   
 
     /*/*//****//***/
 
     .footer-ctn .footer-ctn_hdr .ftr_hdr_terms li{
-        margin-left: 10%;
+        margin-left: 13%;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 360px){
+
+    .contact-cnt .contact .cntct_employs ul li {
+        font-size: 90%;
+    }
+
+    /*/**//********************************/
+
+    .contact-cnt{
+        height: 480vh;
+    }
+
+    /*/*//****//***/
+
+
+    .footer-ctn .footer-ctn_hdr .ftr_hdr_terms li{
+        margin-left: 3%;
         padding: 10px;
         padding-bottom: 10px;
     }
 
-    .footer-ctn .info-ctn .nameApp{
-        margin: 2.5% 0 2.5% 0;
-    }
-    
-    .footer-ctn .info-ctn .app_lst-ctn ul li{
-        font-size: 180%;
-        margin: 0 1.5% 1.5% 2%;
-    }
-
-    .footer-ctn .info-ctn .app_lst-ctn {
-        margin-bottom: 2.5%;
-    }
-    
-    .footer-ctn .info-ctn .dnwl_app-ctn ul li{
-        list-style: none;
-        display: inline-block;
-    }
-    
-    .footer-ctn .info-ctn .dnwl_app-ctn ul li img{
-        width: 120px;
-    }
-    
-    .footer-ctn .info-ctn .end_ftr{
-        font-size: 12px;
-        opacity: 80%;
-        color: #5a5656;
-    }
 }
+
 
 .blockft{
     display: block;

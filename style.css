@@ -404,6 +404,21 @@ header{
     }
 }
 
+
+@media (max-width: 360px){
+    
+
+    /*/*//****//***/
+
+
+    .footer-ctn .footer-ctn_hdr .ftr_hdr_terms li{
+        margin-left: 3%;
+        padding: 10px;
+        padding-bottom: 10px;
+    }
+
+}
+
 .blockft{
     display: block;
     left: 0!important;

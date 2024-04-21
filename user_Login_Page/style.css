@@ -283,12 +283,13 @@ main{
     }
 
     .nav-container .log-cnt_rw img{
-        width: 200%;
+        width: 150%;
+        height: 50%;
     }
 
     .nav-container .log-cnt_rw .logo_ttl{
         position: relative;
-        left: 100%;
+        left: 60%;
     }
 
 
@@ -352,6 +353,11 @@ main{
 
 
     /***********************//**************/
+    
+    .terms-ctn{
+        bottom: 0.2%;
+    }
+    
     .img_medic-cnt{
         width: 50%;
         height: 30%;

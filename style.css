@@ -409,7 +409,9 @@ header{
     
 
     /*/*//****//***/
-
+    .footertxt{
+        bottom: 3%!important;
+    }
 
     .footer-ctn .footer-ctn_hdr .ftr_hdr_terms li{
         margin-left: 3%;

@@ -592,6 +592,12 @@ header{
         height: 100%;
         padding: 10px;
     }
+
+    /***************************************/
+
+    .footertxt{
+        bottom: -5%;
+    }
 }
 
 .blockft{

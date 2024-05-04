@@ -109,12 +109,23 @@ header{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* contact */
 
 
 .contact-cnt{
     margin-top: 5.5%;
-    margin-bottom: 6%;
 }
 
 .contact .txt_cntct{
@@ -135,52 +146,38 @@ header{
     justify-content: center;
 }
 
-.contact-cnt .contact .cntct_employs ul{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    row-gap: 10%;
+/*******************************************//*/*/
 
-    /*display: flex;
+.contact-cnt .contact .cntct_employs {
+    height: auto;
+}
+
+.contact-cnt .contact .cntct_employs ul{
+    border: 1px solid #000;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-basis: 500px;*/
 }
 
 .contact-cnt .contact .cntct_employs ul li{
+    flex-basis: 449px;
+    margin-bottom: 7%;
     list-style: none;
     display: inline-block;
     /*border: 1px dashed #eee;*/
 }
 
-.cntct_employs ul li .firstCntct_info{
-    background-color: #7aaa9e;
-    width: 70%;
-    height: 25pc; 
-    position: relative;
-    top: -5pc;
-    margin: auto;
-    padding: 1.5%;
-    border-radius: 20px;
-    flex-grow: 1;
-
-    box-shadow:  -3px 3px 1px #494747;
-
-}
-
 .contact-cnt .contact .cntct_employs ul li div .img_ctn{
-    height: 20%;
     text-align: center;
+    position: relative;
+    margin-top: -20%;
 }
 
 .contact-cnt .contact .cntct_employs ul li div img{
     height: 120%;
     width: 40%;
-    position: relative;
     border-radius: 50%;
-    top: -50%;
     border: 1.5px solid #000;
-    overflow: hidden;
 }
 
 
@@ -189,12 +186,12 @@ header{
     font-weight: 600;
     letter-spacing: 0.5px;
     padding: 0.6pc;
-    position: relative;
     top: 6px;
-    border-radius: 0 0 20px 20px;
+    margin-top: 20px;
 }
 
 .contact-cnt .contact .cntct_employs ul li div .ext_Detail{
+    margin-top: 5px;
     height: 50%;
     font-size: 95%;
     padding: 10px;
@@ -203,104 +200,20 @@ header{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
-.cntct_employs ul li .sndCntct_info{
-    background-color: #97e7d3;
-    background-color: #7aaa9e;
+.cntct_employs ul li .cntc_infoEdt{
+    background-color: #509e87;
+    background-color: #6d9eb4;
+    border: 2px solid #000;
     width: 70%;
-    height: 25pc; 
     position: relative;
     top: -5pc;
     margin: auto;
     padding: 1.5%;
     border-radius: 20px;
 
-    box-shadow:  -3px 3px 1px #494747;
-
-    .img_ctn{
-        height: 20%;
-        text-align: center;
-    }
-
-    .img_ctn img{
-        height: 120%;
-        width: 40%;
-        position: relative;
-        border-radius: 50%;
-        top: -50%;
-        border: 1.5px solid #000;
-        overflow: hidden;
-    }
-
-    .img_ctn img::before{
-        content: " ";
-        background-color: #0000ff;
-        width: 10px;
-        height: 10px;
-    }
-}
-
-
-.cntct_employs ul li .thrtCntct_info{
-    background-color: #97e7d3;
-    background-color: #7aaa9e;
-    width: 70%;
-    height: 25pc; 
-    position: relative;
-    top: -5pc;
-    margin: auto;
-    padding: 1.5%;
-    border-radius: 20px;
-    
-    box-shadow:  -3px 3px 1px #494747;
+    box-shadow:  -3px 3px 1px #223a59;
 
 }
-
-.cntct_employs ul li .frthCntct_info{
-    background-color: #97e7d3;
-    background-color: #7aaa9e;
-    width: 70%;
-    height: 25pc; 
-    position: relative;
-    top: -5pc;
-    margin: auto;
-    padding: 1.5%;
-    border-radius: 20px;
-
-    box-shadow:  -3px 3px 1px #494747;
-
-}
-
-.cntct_employs ul li .ffthCntct_info{
-    background-color: #97e7d3;
-    background-color: #7aaa9e;
-    width: 70%;
-    height: 25pc; 
-    position: relative;
-    top: -5pc;
-    margin: auto;
-    padding: 1.5%;
-    border-radius: 20px;
-
-    box-shadow:  -3px 3px 1px #494747;
-
-}
-
-.cntct_employs ul li .sxthCntct_info{
-    background-color: #97e7d3;
-    background-color: #7aaa9e;
-    width: 70%;
-    height: 25pc; 
-    position: relative;
-    top: -5pc;
-    margin: auto;
-    padding: 1.5%;
-    border-radius: 20px;
-
-    box-shadow:  -3px 3px 1px #494747;
-
-}
-
 
 
 
@@ -476,13 +389,17 @@ header{
 
     .contact-cnt{
         margin-top: 25%;
-        height: 400vh;
     }
 
     .contact-cnt .contact .cntct_employs .cntct_emp_lst {
         grid-template-columns: auto;
-        row-gap: 6%;
     }   
+
+    .contact-cnt .contact .cntct_employs ul li{
+        margin-bottom: 17%;
+        /*border: 1px dashed #eee;*/
+    }
+
 
     /*/*//****//***/
 
@@ -501,9 +418,7 @@ header{
 
     /*/**//********************************/
 
-    .contact-cnt{
-        height: 480vh;
-    }
+    
 
     /*/*//****//***/
 

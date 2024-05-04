@@ -10,7 +10,7 @@ body{
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    max-width: 100vw;
+    width: 100vw;
     overflow: hidden;
 }
 
@@ -355,17 +355,19 @@ main{
     /***********************//**************/
     
     .terms-ctn{
-        bottom: 0.2%;
     }
     
     .img_medic-cnt{
-        width: 50%;
-        height: 30%;
-        bottom: 0;
-        right: -1%;
+        width: 10%;
+        height: 25%;
+        bottom: 4%;
     }
 
-    
+    .img_medic-cnt img{
+        width: 700%;
+        height: 110%;
+        position: absolute;
+    }
 }
 
 

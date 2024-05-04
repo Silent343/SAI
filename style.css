@@ -16,6 +16,9 @@ body{
 
 :root{
         --darkBlue: #101022;
+        --bannerClr: #539dff;
+        --greenMln: #118f74;
+        --pltColorTwo: #77d6e7;
 }
 
 /*navegtion bar*/
@@ -26,7 +29,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 11.5%;
     z-index: 1000;
     transition: 0.6s;
@@ -115,6 +118,16 @@ header{
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*img background*/
 
 
@@ -136,22 +149,26 @@ header{
 }
 
 .profileBox img{
-    position: absolute;
+    position: fixed;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     opacity: 60%;
+    z-index: -1000000;
 }
 
+
 .footertxt{
-    position: absolute;
-    bottom: 10%;
-    right: 5%;
+    position: relative;
+    text-align: end;
+    width: 96%;
     z-index: 100;
+    font-size: 150%;
+    margin-bottom: 3%;
 }
 
 .footertxt h4{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 135%;
+    font-size: 100%;
 }
 
 .wavesprf{
@@ -160,12 +177,41 @@ header{
     justify-content: end;
     width: auto;
     height: auto;
+    width: 100%;
 }
 
 .wave1{
     width: 55%;
     right: 0;
-    opacity: 85%;
+}
+
+/********************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lineBlr {
+    position: relative;
+}
+
+.lineBlr::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -9PX;
+    width: 100%;
+    height: 10px;
+    background-color: #539dff;
+    filter: blur(5px);
 }
 
 
@@ -173,9 +219,79 @@ header{
 
 
 .banner{
-    height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /*background-color: var(--bannerClr);*/
+    background: linear-gradient(180deg,#539dff 60%,#77d6e7);
 }
+
+.banner .appInfo_Sai{
+    height: 30pc;
+    text-align: center;
+    align-content: center;
+}
+
+.banner .imgMedic_ctn{
+    width: 45%;
+    margin-top: 27%;
+    left: 35%;
+    position: absolute;
+}
+
+.banner .imgMedic_ctn img{
+    width: 70%;
+}
+
+.banner .appInfo_Sai .ttlFrstQst{
+    font-size: 450%;
+}
+
+.banner .appInfo_Sai .Frstxt{
+    font-size: 130%;
+    font-weight: 550;
+}
+
+.banner .mrInfApp{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.banner .mrInfApp .txt_mng{
+    padding: 6%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.banner .mrInfApp .txt_cnt h3{
+    margin-bottom: 5%;
+    font-size: 300%;
+}
+
+.banner .mrInfApp .txt_cnt p{
+    font-size: 120%;
+}
+
+.banner .mrInfApp .txt_cnt{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    text-align: center;
+    align-content: center;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -327,6 +443,26 @@ header{
         margin-left: -5px;
     }
 
+    /**//**//**//**/
+
+    .banner .mrInfApp .txt_mng{
+        flex-basis: 750px;
+    }
+
+    .banner .imgMedic_ctn{
+        width: 90%;
+        left: 0%;
+        margin-top: 52%;
+        opacity: 30%;
+        z-index: 10;
+    }
+    
+    .banner .imgMedic_ctn img{
+        width: 110%;
+        /*object-fit: fill;*/
+    }
+    
+
 
     /*/***/
 
@@ -342,14 +478,14 @@ header{
     }
 
     .profileBox img{
-        position: absolute;
-        left: -40%;
-        width: 140%;
+        left: -100%;
+        width: 340%;
     }
 
     .footertxt{
         position: absolute;
         bottom: 3%;
+        margin-bottom: -6%;
         right: 2%;
         z-index: 100;
         width: 60%;
@@ -357,13 +493,13 @@ header{
     
     .footertxt h4{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 105%;
+        font-size: 100%;
+        margin-bottom: 5%;
+        margin-right: 5%;
     }
 
     .wave1{
         width: 105%;
-        right: 0;
-        opacity: 85%;
     }
 
     /*/*//****//***/
@@ -410,7 +546,9 @@ header{
 
     /*/*//****//***/
     .footertxt{
-        bottom: 3%!important;
+        margin-bottom: -1%;
+        margin-right: 10%;
+        font-size: 90%;
     }
 
     .footer-ctn .footer-ctn_hdr .ftr_hdr_terms li{
@@ -419,6 +557,41 @@ header{
         padding-bottom: 10px;
     }
 
+
+   
+    
+    /**//*//////////*/
+
+    .banner .appInfo_Sai{
+        height: 20pc;
+    }
+
+    .banner .appInfo_Sai .ttlFrstQst{
+        font-size: 200%;
+    }
+
+    .banner .appInfo_Sai .Frstxt{
+        font-size: 100%;
+        font-weight: 550;
+    }
+
+    .banner .mrInfApp .txt_mng{
+        flex-basis: 750px;
+    }
+    .banner .mrInfApp .txt_cnt h3{
+        font-size: 200%;
+    }
+
+    .banner .mrInfApp .txt_cnt p{
+        font-size: 90%;
+        text-align: center;
+    }
+
+    .banner .mrInfApp .txt_cnt{
+        width: 110%;
+        height: 100%;
+        padding: 10px;
+    }
 }
 
 .blockft{

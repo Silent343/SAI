@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="description" content="Deteccion de enfermedades"/>
@@ -12,8 +12,12 @@
         <script src="https://kit.fontawesome.com/a1580b1b63.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="nav-container">
 
+        <div class="returnArrow animate__animated animate__fadeInDownBig">
+            <a href="../user_Login_Page/index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+
+        <header class="nav-container">
             <div class="log-cnt_rw">
                 <span class="alingTxt"><img class="img-logo" src = "../imgLogo/i.png"></span>
                 <span class="alingTxt"><h3><span class="logo_ttl">SAI</span></h3></span>
@@ -32,51 +36,67 @@
                     <span style="color: #0000ff;">|</span>
                     <li class="nav_txt Contacts"><a href="../contact_Page/index.html">Contáctanos</a></li>
                     <span style="color: #0000ff;">|</span>
-                    <li class="nav_txt User"><a href="index.html"><i class="fa-regular fa-user"></i></a></li>
+                    <li class="nav_txt User"><a href="../user_Login_Page/index.html"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </nav>
 
         </header>
 
-        <main class="logIn">
+
+
+        <main class="SignUp">
             <section class=" animate__animated animate__fadeInDownBig login-ctn">
                 <div class="img_frm-ctn">
                     <img src="../imgLogo/i.png" alt="Logo">
                 </div>
 
                 <form class="formCnt" action="https://formsubmit.co/gabrielfgs2004@gmail.com" method="POST" >
-                    <h2>LOGIN</h2>
+                    <h2>Crear cuenta</h2>
                     <div class="input-ctn">
                         <div class="user-box">
-                            <input id="email" type="emai" name="email" required="">
-                            <label class="email" for="email">correo</label>
+                            <input id="name" type="name" name="name" required="">
+                            <label class="name" for="name">Nombre</label>
+                        </div>
+                        <div class="user-box">
+                            <input id="email" type="email" name="email" required="">
+                            <label class="email" for="email">Correo</label>
                         </div>
                         <div class="user-box pssInpt_box">
                             <input id="password" type="password" name="password" required="">
-                            <label class="password" for="password">contraseña</label>
+                            <label class="password" for="password">Contraseña</label>
+                            <img id="eyeicon" src="../imgpag/eye-close.png">
+                        </div>
+                        <div class="user-box pssInpt_box">
+                            <input id="password" type="password" name="password" required="">
+                            <label class="password" for="password">Confirmar Contraseña</label>
                             <img id="eyeicon" src="../imgpag/eye-close.png">
                         </div>
                     </div>
-                    <div class="frgt_psw-cnt">
-                        <a href="#">¿Olvidó su contraseña?</a>
+                    <div class="seprO">o</div>
+                    <div class="btn_frm-ctn btn_googleActn">
+                        <a class="btn_link" >
+                        <i class="fa-brands fa-google"></i>
+                        <span class="creatAcctn">Continuar con Google</span> 
+                        </a>
                     </div>
                     <div class="btn_frm-ctn">
-                        <button type="submit" onclick="infor()">
-                           <span class="btn_txt">Continuar</span> 
+                        <button class="btn_ctrAccount" type="submit" onclick="infor()">
+                           <span class="btn_txt">Crear cuenta</span> 
                         </button>
                     </div>
-                    <div class="singUp-ctn">
-                        <p><span>¿No tienes cuenta?</span><a href="../SingUpPg/index.html">  Regístrese</a></p>
+                    <div class="Login-ctn">
+                        <p><span>¿Ya tienes cuenta?</span><a href="../user_Login_Page/index.html">  Entre aquí</a></p>
                     </div>
                 </form>
 
             </section>
         </main>
 
+        
+
         <div class="img_medic-cnt">
             <img class="img_medic" src="../imgpag/farmacia-medicamentos-medicos-medicina-farmacia-salud-plano-vector-ilustracion-banner-fondo_128772-1928-removebg.png">
         </div>
-
 
         <footer class="terms-ctn">
             <span><a href="#">Términos de uso</a><span> | </span><a href="#"> Política de privacidad</a></span>

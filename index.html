@@ -120,6 +120,36 @@
 
 
         <script type="text/javascript" src="gnrJvsCode/main.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+
+        <script type="text/javascript">
+            
+            
+            ScrollReveal().reveal()
+            window.sr = ScrollReveal();
+            sr.reveal('.imgMedic_ctn',{
+                duration: 3000,
+                origin: 'rigth',
+                distance: '100px'
+            });
+            sr.reveal('.txtProf',{
+                duration: 3000,
+                origin: 'left',
+                distance: '100px'
+            });
+            sr.reveal('.txt_mng',{
+                duration: 3000,
+                origin: 'bottom',
+                distance: '100px'
+            });
+            sr.reveal('.appInfo_Sai',{
+                duration: 3000,
+                origin: 'top',
+                distance: '100px'
+            });
+
+        </script>
 
     </body>
 </html>

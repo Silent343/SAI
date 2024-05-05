@@ -18,7 +18,6 @@ body{
 /*navegtion bar*/
 
 header{
-    color: #fff;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -28,6 +27,7 @@ header{
     z-index: 1000;
     transition: 0.6s;
     z-index: 10000000;
+    color: #fff;
 }
 
 .btns{
@@ -86,8 +86,8 @@ header{
 
 .nav_bar ul li a{
     text-decoration: none;
-    color: #f8f8ffbd;
     transition: 0.6s;
+    color: #f8f8ffbd;
 }
 
 .nav_bar ul li a:hover{
@@ -95,11 +95,7 @@ header{
 }
 
 
-
-
-
-
-/*formulario*/
+/************************************************/
 
 main{
     width: 100vw;
@@ -138,9 +134,12 @@ main{
 
 .formCnt h2{
     text-align: center;
-    margin-top: 20%;
-    font-size: 240%;
+    margin-top: 8%;
+    font-size: 200%;
+    color: #fff;
 }
+
+
 
 .formCnt .input-ctn {
     width: 100%;
@@ -162,7 +161,7 @@ main{
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
@@ -174,7 +173,7 @@ main{
     top:0;
     left: 0;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 13px;
     color: #fff;
     pointer-events: none;
     transition: .5s;
@@ -190,12 +189,10 @@ main{
   letter-spacing: 1px;
 }
 
-.frgt_psw-cnt{
+.btn_frm-ctn{
     text-align: center;
-    font-size: 14px;
-    margin-top: -6%;
+    padding: 10px;
 }
-
 
 .pssInpt_box{
     display: flex;
@@ -206,28 +203,72 @@ main{
     right: 0;
     margin-top: 4%;
     width: 6%;
-    height: 26%;
+    height: 30%;
     cursor: pointer;
 }
 
-
-.frgt_psw-cnt a{
-    text-decoration: none;
-    color: #ffe4c4;
+main form .seprO{
+    text-align: center;
 }
 
-.btn_frm-ctn{
-    text-align: center;
-    padding: 10px;
+main form .seprO::before{
+    content: '';
+    left: 20%;
+    margin-top: 1.2%;
+    background-color: #0000004f;
+    position: absolute;
+    width: 25%;
+    height: 0.1px;
+}
+
+main form .seprO::after{
+    content: '';
+    position: absolute;
+    right: 20%;
+    margin-top: 1.2%;
+    width: 25%;
+    height: 0.1px;
+    background-color: #0000004f;
+
 }
 
 .btn_frm-ctn button{
     cursor: pointer;
-    width: 30%;
+    width: 60%;
     height: 3pc;
     border-radius: 20px;
     border-color: transparent;
+}
+
+.btn_googleActn{
+    border-radius: 20px;
+    border: 1px solid #0b795d;
+    cursor: pointer;
+    width: 60%;
+    margin: auto;
+    margin-top: 1%;
+    background-color: rgb(188, 211, 231);
+
+    i{
+        margin-right: 20px;
+    }
+
+    .creatAcctn{
+        font-weight: bolder;
+    }
+}
+
+.btn_googleActn:hover{
+    background-color: #aaafadc5;
+}
+
+.btn_ctrAccount{
+    margin-top: 2%;
     background-color: rgb(24, 155, 116);
+}
+
+.btn_ctrAccount:hover{
+    background-color: rgb(29, 94, 74);
 }
 
 .btn_frm-ctn .btn_txt{
@@ -236,16 +277,17 @@ main{
     color: #fff;
 }
 
-.singUp-ctn{
+.Login-ctn{
     font-size: 14px;
     color: #ffe4c4;
     text-align: center;
-    margin-top: 5%;
 }
 
-.singUp-ctn a{
+.Login-ctn a{
     text-decoration: none;
 }
+
+
 
 
 /*footer*/
@@ -277,8 +319,6 @@ main{
     right: 0;
     z-index: -10000;
 }
-
-
 
 @media (max-width: 768px){
     .btns{
@@ -366,14 +406,6 @@ main{
     }
 
 
-    .pssInpt_box img{
-        margin-top: 3%;
-        margin-right: 5%;
-        width: 10%;
-        height: 28%;
-        cursor: pointer;
-    }
-
 
     /***********************//**************/
     
@@ -390,8 +422,18 @@ main{
     }
 }
 
+.returnArrow, .fa-arrow-left{
+    display: none;
+}
+
+
+
 
 @media (max-width: 410px){
+
+    body{
+        background-color: #e6e6e6;
+    }
 
     .btn_frm-ctn button{
         width: 50%;
@@ -410,6 +452,157 @@ main{
         padding-bottom: 10px;
     }
 
+    .img_medic-cnt img{
+        display: none;
+    }
+
+    /******************* Phone model **************************/
+
+    .img_frm-ctn{
+        position: absolute;
+        right: 4%;
+        top: -10%;
+        display: flex;
+        justify-content: end;
+        width: 20%!important;
+    }
+
+    .img_frm-ctn img{
+        width: 100%!important;
+    }
+
+    .formCnt h2{
+        color: #5292a5;
+        position: absolute;
+        top: -11.5%;
+        font-size: 120%;
+        right: 35%;
+    }
+
+    .formCnt .user-box label {
+        position: absolute;
+        top:0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 13px;
+        color: #000;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .formCnt .input-ctn {
+        width: 100%;
+        margin: auto;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .formCnt .input-ctn .user-box {
+        position: relative;
+        width: 100%;
+    }
+
+
+    .formCnt .user-box input{
+        width: 100%;
+        padding: 10px 10px;
+        margin-bottom: 30px;
+        border-radius: 12px;
+        background: #73737333;
+        color: #000;
+        font-size: 12px;
+        margin-bottom: 10%;
+    }
+
+    .formCnt .user-box label {
+        top:-45%;
+    }
+
+    .formCnt .user-box input:focus ~ label,
+    .formCnt .user-box input:valid ~ label {
+        top: -42%;
+        left: 0;
+        color: #444447;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+    }
+
+    .btn_frm-ctn{
+        text-align: center;
+        padding: 10px;
+    }
+
+    main form .seprO{
+        text-align: center;
+    }
+
+    main form .seprO::before{
+        left: 10%;
+        margin-top: 2.5%;
+        width: 35%;
+    }
+
+    main form .seprO::after{
+        right: 10%;
+        margin-top: 2.5%;
+        width: 35%;
+
+    }
+
+    .btn_frm-ctn button{
+        margin-top: 30%;
+        width: 100%;
+        background-color: #529797;
+    }
+
+    .btn_googleActn{
+        padding: 5%;
+        width: 100%;
+        margin: auto;
+        margin-top: 10%;
+        background-color: transparent;
+    }
+
+    .btn_googleActn:hover{
+        background-color: transparent;
+    }
+
+    .returnArrow, .fa-arrow-left{
+        display: block;
+    }
+
+    .returnArrow{
+        position: absolute;
+        top: 7.5%;
+        left: 10%;
+        color: #0b795d;
+    }
+
+    .nav-container{
+        display: none;
+    }
+
+
+    .Login-ctn {
+        color: #444040;
+    }
+
+    .pssInpt_box img{
+        position: absolute;
+        right: 0;
+        margin-top: 3%;
+        margin-right: 5%;
+        width: 6%;
+        height: 28%;
+        cursor: pointer;
+    }
+    
+
 }
 
 .blockft{
@@ -419,5 +612,4 @@ main{
 
 .bckScroll{
     background-color: rgb(65, 92, 167);
-
 }

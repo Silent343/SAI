@@ -12,18 +12,85 @@
         <script src="https://kit.fontawesome.com/a1580b1b63.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="nav-container">
 
-            
-
+        <header class="nav-container">            
+            <nav>
+                <div class="txt_nav">
+                    <ul class="infoTxt first_ctn">
+                        <li>
+                            <img src="../imgLogo/i.png">
+                            <p class="linkA1"><a class="active" href="index.html">SAI</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="txt_nav">
+                    <ul class="infoTxt second_ctn">
+                        <li>
+                            <i class="fa-solid fa-newspaper"></i>
+                            <p class="linkA3"><a href="#">Noticias</a></p>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-play"></i>
+                            <p class="linkA4"><a href="#">Videos</a></p>
+                        </li>
+                        <li>
+                            <p class=" profileTxt"><a href="profile_page/index.html">Silent</a></p>
+                            <img class="profileImg" src="../imgpag/userDefeat.png">
+                        </li>
+                        <li class="disp">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
 
-        <main class="logIn">
+        <section class="historyChats">
+            <div class="headSect">
+                <p class="txt">Chat</p>
+            </div>
+            <div class="addNew">
+                <button class="btnAdd">
+                    <i class="fa-solid fa-circle-plus"></i>
+                </button>
+            </div>
+            <div class="historyBx">
+                <p >Recientes</p>
+                <div class="txt_Bx-ctn">
+                    <div class="txt_Bx">
+                        <p class="txtTitle">Ihc</p>
+                        <p class="timeTask">4:00 <span class="dayTime">p</span>. m.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="instPlan">
+                <span class="flex h-7 w-7 items-center justify-center rounded-full border border-token-border-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon-sm shrink-0"><path fill="currentColor" d="M6.394 4.444c.188-.592 1.024-.592 1.212 0C8.4 8.9 9.1 9.6 13.556 10.394c.592.188.592 1.024 0 1.212C9.1 12.4 8.4 13.1 7.606 17.556c-.188.592-1.024.592-1.212 0C5.6 13.1 4.9 12.4.444 11.606c-.592-.188-.592-1.024 0-1.212C4.9 9.6 5.6 8.9 6.394 4.444m8.716 9.841a.41.41 0 0 1 .78 0c.51 2.865.96 3.315 3.825 3.826.38.12.38.658 0 .778-2.865.511-3.315.961-3.826 3.826a.408.408 0 0 1-.778 0c-.511-2.865-.961-3.315-3.826-3.826a.408.408 0 0 1 0-.778c2.865-.511 3.315-.961 3.826-3.826Zm2.457-12.968a.454.454 0 0 1 .866 0C19 4.5 19.5 5 22.683 5.567a.454.454 0 0 1 0 .866C19.5 7 19 7.5 18.433 10.683a.454.454 0 0 1-.866 0C17 7.5 16.5 7 13.317 6.433a.454.454 0 0 1 0-.866C16.5 5 17 4.5 17.567 1.317"></path></svg>
+                </span>
+                <p class="txtPlan">Instala el plan</p>
+            </div>
+            <div class="comentBx">
+                <i class="fa-solid fa-comment"></i>
+                <p class="txtComent"></p>
+            </div>
+        </section>
+
+        
+        <main class="AIBox">
+            <div class="pnlAi"></div>
+            <div class="txtBox_ctn">
+                <div class="txtBox">
+                    <textarea name="txtWrite" placeholder="Pregúntame algo..." rows="2"></textarea>
+                    <button class="incCtn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
         </main>
 
        
 
-        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript" src="../gnrJvsCode/main.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
 
     </body>

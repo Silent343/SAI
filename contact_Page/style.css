@@ -410,7 +410,7 @@ header{
 
 }
 
-@media (max-width: 410px){
+@media (max-width: 767px){
 
     .contact-cnt .contact .cntct_employs ul li {
         font-size: 90%;

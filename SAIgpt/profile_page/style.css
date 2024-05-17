@@ -37,9 +37,6 @@ body{
 
 /**header**/
 
-.fa-bars-staggered{
-    display: none;
-}
 
 header{
     grid-area: header;
@@ -93,7 +90,7 @@ header nav .txt_nav .infoTxt li{
 }
 
 .fa-bars-staggered{
-    display: none;
+    display: none!important;
 }
 
 header nav div .linkA1{
@@ -119,8 +116,12 @@ header nav .txt_nav .infoTxt .profileTxt{
 }
 
 fa-bars-staggered{
-    display: none;
+    display: none!important;
 }
+
+
+
+
 
 /*profile box*/
 
@@ -212,6 +213,13 @@ main .profileBox img{
         display: flex;
     }
 }
+
+
+
+
+
+
+
 
 .img_EditPrfl{
     padding: 2%;
@@ -346,6 +354,19 @@ section:nth-child(2){width: 70%;}
     text-decoration: underline;
 }
 
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////*/
+
+
+
 #account-general{
     display: block;
 }
@@ -355,6 +376,42 @@ section:nth-child(2){width: 70%;}
     text-align: center;
     padding: 5%;
 }
+
+#account-change-password{
+    display: none;
+    flex-direction: column;
+    padding: 4%;
+    height: 100%;
+
+    svg{
+        width: 40%;
+        float: right;
+    }
+}
+
+#account-change-password{
+    display: none;
+    padding: 4%;
+    height: 100%;
+}
+
+#account-notifications{
+    display: none;
+    height: 100%;
+    padding: 5%;
+}
+
+/*////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
 
 .apk_Dnw{
 
@@ -429,7 +486,6 @@ section:nth-child(2){width: 70%;}
 }
 
 
-
 .visibleCnt{
     display: block!important;
 }
@@ -441,4 +497,215 @@ section:nth-child(2){width: 70%;}
 .active{
     border: 1px solid #0505051e;
     background-color: #6499b665;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wave-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    div{
+        margin-left: 5%;
+        margin-bottom: 10%;
+    }
+}
+
+.wave-group .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #1d1b1b;
+    background: transparent;
+}
+
+.wave-group .input:focus {
+    outline: none;
+}
+
+.wave-group .label{
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    margin-top: -4%;
+    display: flex;
+}
+
+.wave-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+    transform: translate(-20%,-150%);
+    font-size: 14px;
+    color: #313135;
+    font-weight: bold;
+}
+
+.wave-group .bar {
+    position: relative;
+    display: block;
+    width: 200px;
+}
+
+.wave-group .bar:before,.wave-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #2b324b;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+    left: 50%;
+}
+
+.wave-group .bar:after {
+    right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.05rem;
+    display: flex;
+    user-select: none;
+}
+
+.ntf-ctn .card-body{
+    margin-bottom: 5px;
+}
+
+.ntf-ctn svg{
+    width: 30%;
+    float: right;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    --clr: #0B6E4F;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    margin-right: 4px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: 300ms;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: var(--clr);
+    border-radius: .5rem;
+    animation: p 600ms ease-in-out;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid #E0E0E2;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}
+
+@keyframes p {
+    0% {
+        box-shadow: 0 0 0 #0B6E4F90;
+        rotate: 20deg;
+    }
+
+    50% {
+        rotate: -20deg;
+    }
+
+    75% {
+        box-shadow: 0 0 0 10px #0B6E4F60;
+    }
+
+    100% {
+        box-shadow: 0 0 0 13px #0B6E4F30;
+        rotate: 0;
+    }
+}
+
+.ntf-ctn {
+    .mb-4{
+        font-size: x-large;
+        font-weight: bolder;
+    }
+}
+
+.ntf-ctn .card-body .label-ctn{
+    margin-top: 2%;
+    margin-bottom: 2%;
 }

@@ -234,7 +234,7 @@ header{
 
 .banner .imgMedic_ctn{
     width: 45%;
-    margin-top: 27%;
+    margin-top: 370px;
     left: 35%;
     position: absolute;
 }
@@ -450,9 +450,9 @@ header{
     }
 
     .banner .imgMedic_ctn{
-        width: 90%;
-        left: 0%;
-        margin-top: 52%;
+        width: 40%;
+        margin: auto;
+        margin-top: 220px;
         opacity: 30%;
         z-index: 10;
     }

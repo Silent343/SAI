@@ -13,7 +13,7 @@ navToggle.addEventListener("click", () => {
 })
 
 
-let eyeicon = document.getElementById("eyeicon");
+/*let eyeicon = document.getElementById("eyeicon");
 let password = document.getElementById("password");
 
 eyeicon.onclick = function(){
@@ -25,7 +25,7 @@ eyeicon.onclick = function(){
         password.type = "password";
         eyeicon.src = "../imgpag/eye-close.png"
     }
-}
+}*/
 
 
 /**************************************************/ 

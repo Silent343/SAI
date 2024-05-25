@@ -35,6 +35,9 @@ body{
 
 /**header**/
 
+.returnArrow{
+    display: none;
+}
 
 header{
     grid-area: header;
@@ -87,10 +90,6 @@ header nav .txt_nav .infoTxt li{
     color: #53237a;
 }
 
-.fa-bars-staggered{
-    display: none!important;
-}
-
 header nav div .linkA1{
     margin-top: 5px;
 }
@@ -113,8 +112,8 @@ header nav .txt_nav .infoTxt .profileTxt{
     margin-right: 10%;
 }
 
-fa-bars-staggered{
-    display: none!important;
+.menuToggle{
+    display: none;
 }
 
 
@@ -153,6 +152,7 @@ main .profileBox{
     display: flex;
     flex-direction: row;
     justify-content: start;
+    flex-wrap: wrap;
 
     .imgPrf_ctn{
         text-align: center;
@@ -707,3 +707,175 @@ section:nth-child(2){width: 70%;}
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
+
+.ntfcCtn {
+    border-radius: 0 0 20px 20px;
+}
+
+
+@media (max-width: 767px){
+
+    .first-list{
+        display: none;
+    }
+
+    .returnArrow{
+        display: block;
+        float: left;
+        position: absolute;
+        bottom: 2%;
+
+        i{
+            color: #ffffff;
+            color: #2c2929;
+        }
+    }
+
+    .menuToggle{
+        display: block;
+        margin: 5%;
+    }
+
+    .prflIfn_cnt,
+    .all-Info-ctn{
+        border-radius: 20px;
+    }
+
+    .first_ctn{
+        margin: 10%;
+    }
+
+    .porfileBox_ctn{
+        overflow-y: hidden;
+        height: 85%;
+        margin-top: -10%;
+    }
+
+    .prflIfn_cnt{
+        flex-basis: 100%;
+    }
+
+    header{
+        height: 30%;
+    }
+    
+    .all-Info-ctn{
+        width: 95%!important;
+        background-color: #c9c9c9;
+        height: 95%!important;
+        position: fixed;
+        left: -120%;
+
+        
+        transition: left 0.3s!important;
+    }
+
+
+    /***************************************/
+
+    .img_EditPrfl{
+        padding: 2%!important;
+        width: 200%;
+        align-items: center;
+    
+        .ml-4{
+            margin-left: 2%!important;
+        }
+    }
+
+    .ml-4 small{
+        font-size: 8px;
+        margin-left: -15%;
+    }
+
+    .btn-outline-primary , btn-primary{
+        padding: 3%!important;
+    }
+
+    .md-btn-flat{
+        margin-top: 10%;
+    }
+
+    .formCtn form input{
+        margin: 10% 0 4% 0;
+        width: 50%;
+    }
+    
+    .formCtn form .label{
+        margin: 10% 0 4% 0;
+        width: 50%;
+    }
+
+    .input-field:not(:placeholder-shown) + .input-label {
+        transform: translateY(0%);
+    }
+
+    .mt-3{
+        margin-top: 20%;
+    }
+
+    /**********************************************************/
+
+    .apk_Dnw{
+
+        img{
+            width: 100%!important;
+        }
+
+        button{
+            margin-top: 20%;
+            width: 55%;
+            cursor: pointer;
+        }
+    }
+    
+    .svgCtn svg{
+        width: 40%;
+        margin-top: 90%!important;
+    }
+
+
+    /**************************************************************/
+
+    .checkmark {
+        height: 1.3em;
+        width: 1.2em;
+        margin-right: 7px;
+        background-color: #ccc;
+        transition: 300ms;
+    }
+
+    .firstNtf-Ctn .checkmark{
+        width: 1.5em;
+    }
+    
+    .checkmarkEs{
+        width: 2em!important;
+    }
+
+
+
+    /****************************************************************/
+
+    
+    .wave-group {
+        div{
+            margin-top: 5%;
+        }
+    }
+    
+    .wave-group .label{
+        margin-top: -9%;
+    }
+
+    .wave-group .input:focus ~ label .label-char,
+    .wave-group .input:valid ~ label .label-char {
+        transform: translate(-20%,-150%);
+    }
+}
+
+.bringBack{
+    left: 2.5%!important;
+}
+

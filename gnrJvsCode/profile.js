@@ -57,8 +57,16 @@ const passLink = document.querySelector(".pwrdCtn")
 const apkLink = document.querySelector(".appCtn")
 const ntfcLink = document.querySelector(".ntfcCtn")
 
+const allInfoSec = document.querySelector(".all-Info-ctn")
+const backArrow = document.querySelector(".fa-arrow-left")
+const profileInfo = document.querySelector(".prflIfn_cnt")
+
 const arrPagChng = [acctPag, passPag, apkPag, ntfcPag];
 const arrLnkChng = [acctLink, passLink, apkLink, ntfcLink];
+
+backArrow.addEventListener("click", () => {
+    allInfoSec.classList.remove("bringBack")
+})
 
 for (let i = 0; i < arrPagChng.length; i++) {
     arrLnkChng[i].addEventListener("click", () => {
@@ -67,6 +75,7 @@ for (let i = 0; i < arrPagChng.length; i++) {
         arrPagChng[i].classList.add("visibleCnt")
         arrPagChng[i].classList.remove("invisibleCnt")
         arrLnkChng[i].classList.add("active")
+        allInfoSec.classList.toggle("bringBack");
 
         for (let i = 0; i < arrPagChng.length; i++) {
             if (arrPagChng[i].classList.contains("visibleCnt") && arrPagChng[i] != element) {

@@ -14,7 +14,7 @@
     <body>
 
         <header class="nav-container">            
-            <nav>
+            <nav class="nav-bar">
                 <div class="txt_nav">
                     <ul class="infoTxt first_ctn">
                         <li>
@@ -23,7 +23,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="txt_nav">
+                <div class="txt_nav first-list">
                     <ul class="infoTxt second_ctn">
                         <li>
                             <i class="fa-solid fa-newspaper"></i>
@@ -37,10 +37,10 @@
                             <a class="profileTxt actPg usr-Name" href="index.html">Silent</a>
                             <img id="imgPerfil" class="profileImg" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/271deea8-e28c-41a3-aaf5-2913f5f48be6/de7834s-6515bd40-8b2c-4dc6-a843-5ac1a95a8b55.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI3MWRlZWE4LWUyOGMtNDFhMy1hYWY1LTI5MTNmNWY0OGJlNlwvZGU3ODM0cy02NTE1YmQ0MC04YjJjLTRkYzYtYTg0My01YWMxYTk1YThiNTUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BopkDn1ptIwbmcKHdAOlYHyAOOACXW0Zfgbs0-6BY-E" />
                         </li>
-                        <li>
-                            <i class="fa-solid fa-bars-staggered"></i>
-                        </li>
                     </ul>
+                </div>
+                <div class="menuToggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
                 </div>
             </nav>
         </header>
@@ -219,7 +219,7 @@
      
                     <div class="tab-pane fade select-group-click" id="account-notifications">
                         <form class="ntf-ctn" action="submit">
-                            <div class="card-body pb-2">
+                            <div class="card-body pb-2 firstNtf-Ctn">
                                 <span class="mb-4">Activity</span>
                                 <div class="label-ctn">
                                     <label class="container">
@@ -238,7 +238,7 @@
                                 <div class="label-ctn">
                                     <label class="container">
                                         <input type="checkbox" checked="checked" >
-                                        <div class="checkmark"></div>
+                                        <div class="checkmark checkmarkEs"></div>
                                         <span class="switcher-label">Notificame si hay un brote de enfermedad cerca d mí</span>
                                     </label>
                                 </div>
@@ -273,6 +273,10 @@
                             </div>
                         </form>
                     </div>
+
+                    <div class="returnArrow">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
                 </section>
             </div>
         </main>
@@ -280,15 +284,8 @@
 
         <script type="text/javascript" src="../../gnrJvsCode/profile.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
        
-       <script type="text/javascript" >
-        
-
-
-        </script>
-
     </body>
 </html>

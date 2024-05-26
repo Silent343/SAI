@@ -28,6 +28,7 @@ body{
     grid-template-areas: 
     "header header header section"
     "main main main section";
+    transition: 0.2s;
 }
 
 
@@ -217,6 +218,7 @@ main .txtBox_ctn{
 main .txtBox_ctn .txtBox{
     border: 1px solid #545250;
     width: 80%;
+    margin-top: 10px;
     margin-left: 6%;
     padding: 1%;
     border-radius: 20px;
@@ -261,17 +263,75 @@ main .txtBox_ctn .txtBox{
     }
 }
 
+.iaTitle{
+    text-align: center;
+    img{
+        margin-top: 14%;
+        width: 10%;
+    }
+    h2{
+        color: #fff;
+        transition: 0.3s;
+    }
+}
 
 
+.gloveDec {
+    margin: 3% 4% 4% 4%;
 
+    img{
+        background-color: #ebecf0c9;
+    }
 
+    p{
+        padding: 4px 6px 4px 18px;
+        margin-left: 3.5%;
+    }
+}
 
+.gloveDecAi,
+.gloveDec{
+    display: flex;
+    img{
+        width: 30px;
+        position: absolute;
+        border-radius: 99999px;
+        box-shadow: inset 0 0 0 1px rgba(57,76,96,.15)
+    }
+    p{
+        position: absolute;
+        color: #000;
+        border-radius: 20px;
+        background-color: #ffffffda;
+        font-weight: bolder;
+        max-width: 52%;
+    }
+}
 
+.gloveDecAi{
+    margin: 3% 4% 4% 4%;
+    justify-content: end;
 
+    img{
+        background-color: #ffffff;
+    }
 
+    p{
+        padding: 4px 18px 4px 6px;
+        margin-right: 3.5%;
+    }
 
+}
 
+.pnlAi{
+    position: relative;
+    overflow-y: scroll;
+}
 
+    
+.pnlAi::-webkit-scrollbar {
+    display: none;
+}
 
 /*section*/
 
@@ -325,6 +385,7 @@ main .txtBox_ctn .txtBox{
 .historyChats{
     grid-area: section;
     position: relative;
+    background-color: var(--drkBlClr);
     z-index: 1000000;
     display: flex;
     flex-direction: column;
@@ -661,15 +722,36 @@ main .txtBox_ctn .txtBox{
         margin-top: 15%!important;
     }
 
+    .iaTitle{
+        margin-top: 50%;
+    }
+
+    .gloveDecAi{
+        margin-top: 15%;
+        img{
+            width:10%;
+        }
+        p{
+            margin-right: 15%;
+        }
+    }
+
+    .gloveDec{
+        margin-top: 25%;
+        img{
+            width:10%;
+        }
+        p{
+            margin-left: 15%;
+        }
+    }
+
 }
 
 .backSect{
     left: 0%;
 }
 
-.bckScroll{
-    background-color: rgb(65, 92, 167);
-}
 
 .blockft{
     display: block;

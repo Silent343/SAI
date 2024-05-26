@@ -295,6 +295,10 @@ main .profileBox img{
     width: 50%;
 }
 
+.usr-email{
+    text-overflow: ellipsis;
+}
+
 .alert-warning{ display: none;}
 
 section:nth-child(1){width: 30%;}

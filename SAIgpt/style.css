@@ -339,18 +339,37 @@ main .txtBox_ctn .txtBox{
     padding-left: 5%;
     font-size: 120%;
     color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    .txt{
+        margin-top: 12%;
+    }
+    .backArrow{
+        display: none;
+        margin: 12% 4% 0 0;
+        z-index: 100;
+    }
 }
 
-.historyChats .headSect::before{
+.fa-arrow-left:hover{
+    cursor: pointer;
+}
+
+.bringArrowSec{
+    display: none;
+}
+
+.historyChats .headSect .txt::before{
     content: ' ';
     position: absolute;
-    top: 7.5%;
+    margin-top: 7.5%;
     color: #937fee;
     background-color: #7033a8;
     width: 45px;
     height: 5px;
     border-radius: 20px;
 }
+
 
 .addNew{
     height: 8%;
@@ -463,7 +482,7 @@ main .txtBox_ctn .txtBox{
 }
 
 .instPlan:hover{
-    background-color: #0012336e;
+    background-color: #0f2142e1;
     cursor: pointer;
 }
 
@@ -513,10 +532,6 @@ main .txtBox_ctn .txtBox{
     }
 }
 
-.disLiMn{
-    display: none!important;
-}
-
 
 @media (max-width: 767px){
 
@@ -525,7 +540,16 @@ main .txtBox_ctn .txtBox{
                              "main main main";
     }
 
-    .disLiMn{
+    .bringArrowSec{
+        display: block;
+        position: absolute;
+        top: 9%;
+        right: 6%;
+        color: #fff;
+        z-index: 1000;
+    }
+
+    .backArrow{
         display: block!important;
     }
 
@@ -538,7 +562,14 @@ main .txtBox_ctn .txtBox{
 
     .sct{
         position: fixed;
+        height: calc(100vh - 55px);
+        top: 55px;
+        width: 100%;
         left: 100%;
+        background-color: #021024;
+        z-index: 100000000;
+
+        transition: left 0.3s;
     }
 
     main{
@@ -554,23 +585,35 @@ main .txtBox_ctn .txtBox{
         top: 2.2%;
         right: 5%;
         font-size: 120%;
-
+        
     }
 
     .first-list{
         position: fixed;
         left: 150%;
-        top: 7.4%;
+        top: 55px;
+        z-index: 10000000;
+        width: 28%;
+
         transition: left 0.3s;
     }
 
     .first-list .infoTxt{
-        display: flex!important;
+        display: flex;
         flex-direction: column-reverse!important;
         padding: 4%;
+        border-radius: 20px;
         background-color: #5f6b81;
+        background-color: #c5c5c5;
         img{
-            margin-left: 25%;
+            margin-left: 30%;
+        }
+        height: 10pc;
+        a{
+            color: #000;
+        }
+        i{
+            color: #640909;
         }
     }
 
@@ -620,16 +663,16 @@ main .txtBox_ctn .txtBox{
 
 }
 
-
+.backSect{
+    left: 0%;
+}
 
 .bckScroll{
     background-color: rgb(65, 92, 167);
 }
 
 .blockft{
-    border-radius: 20px!important;
     display: block;
-    width: 30%;
-    left: 70%!important;
+    left: 72%;
 }
 

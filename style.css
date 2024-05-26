@@ -450,11 +450,12 @@ header{
     }
 
     .banner .imgMedic_ctn{
-        width: 40%;
+        width: 45%;
         margin: auto;
-        margin-top: 220px;
+        margin-top: 240px;
         opacity: 30%;
         z-index: 10;
+        margin-left: -40px;
     }
     
     .banner .imgMedic_ctn img{

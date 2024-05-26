@@ -44,7 +44,6 @@ header{
     background-color: var(--bckGrnd);
     padding: 1%;
     height: 65px;
-    border-radius: 0 0 10px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -737,7 +736,31 @@ section:nth-child(2){width: 70%;}
 @media (max-width: 767px){
 
     .first-list{
-        display: none;
+        position: fixed;
+        top: 65px;
+        z-index: 10000000;
+        width: 28%;
+        left: 120%;
+
+        transition: left 0.3s;
+    }
+
+    .first-list .infoTxt{
+        display: flex;
+        flex-direction: column-reverse!important;
+        padding: 4%;
+        border-radius: 20px;
+        background-color: #c5c5c5;
+        img{
+            margin-left: 30%;
+        }
+        height: 10pc;
+        a{
+            color: #000;
+        }
+        i{
+            color: #640909;
+        }
     }
 
     .returnArrow{
@@ -755,6 +778,12 @@ section:nth-child(2){width: 70%;}
     .menuToggle{
         display: block;
         margin: 5%;
+    }
+
+    .first_ctn{
+        img{
+            margin-top: 8px;
+        }
     }
 
     .prflIfn_cnt,
@@ -777,17 +806,13 @@ section:nth-child(2){width: 70%;}
         border-right: 1px solid #fff;
     }
 
-    header{
-        height: 30%;
-    }
-    
     .all-Info-ctn{
         width: 95%!important;
         background-color: #c9c9c9;
         height: 95%!important;
         position: fixed;
         left: -120%;
-        border-left: 1px solid #fff;
+        border-left: 1px solid #ffffff;
 
         
         transition: left 0.3s!important;
@@ -798,11 +823,13 @@ section:nth-child(2){width: 70%;}
 
     .img_EditPrfl{
         padding: 2%!important;
-        width: 200%;
         align-items: center;
     
         .ml-4{
             margin-left: 2%!important;
+        }
+        img{
+            width: 30%!important;
         }
     }
 
@@ -901,3 +928,10 @@ section:nth-child(2){width: 70%;}
     left: 2.5%!important;
 }
 
+.bckScroll{
+    background-color: rgb(65, 92, 167);
+}
+
+.blockft{
+    left: 71.8%;
+}

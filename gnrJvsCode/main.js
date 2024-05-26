@@ -13,19 +13,27 @@ navToggle.addEventListener("click", () => {
 })
 
 
-/*let eyeicon = document.getElementById("eyeicon");
-let password = document.getElementById("password");
+let eyeicon = document.getElementById("eyeicon");
+let eyeicon2 = document.getElementById("eyeicon2");
+let password = document.querySelector(".password");
+let password2 = document.querySelector(".Rpassword");
 
-eyeicon.onclick = function(){
-    if(password.type == "password"){
-        password.type = "text";
-        eyeicon.src = "../imgpag/eye-open.png"
-    }
-    else{
-        password.type = "password";
-        eyeicon.src = "../imgpag/eye-close.png"
-    }
-}*/
+const eyeArr = [eyeicon,eyeicon2]
+const passArr = [password,password2]
+
+for (let i = 0; i < eyeArr.length; i++) {
+    eyeArr[i].addEventListener("click",()=>{
+        if(passArr[i].type == "password"){
+            passArr[i].type = "text";
+            eyeArr[i].src = "../imgpag/eye-open.png"
+        }
+        else{
+            passArr[i].type = "password";
+            eyeArr[i].src = "../imgpag/eye-close.png"
+        }
+    })
+}
+
 
 
 /**************************************************/ 

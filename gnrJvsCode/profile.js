@@ -1,4 +1,6 @@
-let usrName = document.querySelectorAll(".usr-Name");
+let NcNameChng = document.querySelectorAll(".usr-NickName");
+const usrName = document.querySelector("#name");
+const usrEmail = document.querySelector("#email");
 const usrNicknm = document.querySelector("#nickName");
 
 
@@ -12,19 +14,30 @@ const file = document.getElementById( 'inputPrf' );
 
 window.addEventListener("DOMContentLoaded", () => {
     const savedNickName = localStorage.getItem("nickname");
-    const savedImgProfile = localStorage.getItem("general-img")
+    const savedImgProfile = localStorage.getItem("general-img");
+    const savedNameUsr = localStorage.getItem("nameUsr");
+    const savedEmail = localStorage.getItem("email");
+
     if(savedNickName) {
         usrNicknm.value = savedNickName;
-        usrName.forEach(element => {
+        NcNameChng.forEach(element => {
             element.textContent = savedNickName;
         })
+    }
+    if (savedNameUsr) {
+        usrName.value = savedNameUsr;
+    }
+    if (savedEmail) {
+        usrEmail.value = savedEmail;
     }
     if(savedImgProfile) {
         img.src = savedImgProfile;
         img1.src = savedImgProfile;
         img2.src = savedImgProfile;
         img.style.backgroundColor = "#ebecf0a2";
+        img1.style.backgroundColor = "#ebecf020";
         img.style.boxShadow = "inset 0 0 0 1px rgba(57,76,96,.15)"
+        img1.style.boxShadow = "inset 0 0 0 2px rgba(57,76,96,.15)"
     }
 })
 
@@ -89,17 +102,56 @@ for (let i = 0; i < arrPagChng.length; i++) {
     })  
 }
 
-usrNicknm.addEventListener("input", () => {
+const btnSvDtAcct = document.querySelector("#saveFirstData")
+
+btnSvDtAcct.addEventListener("click", () => {
+    /***/
     let newValue = usrNicknm.value;
-    usrName.forEach(element => {
+    NcNameChng.forEach(element => {
         element.textContent = newValue
     })
 
     if (usrNicknm.value == "") {
-        usrName.forEach(element => {
+        NcNameChng.forEach(element => {
+            element.textContent = "User"
+        })
+    }
+    /***/
+    let newNameV = usrName.value;
+    let newEmailV = usrEmail.value;
+    
+    localStorage.setItem("email", newEmailV)
+    localStorage.setItem("nameUsr", newNameV)
+    localStorage.setItem("nickname", newValue)
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+        }
+    });
+    Toast.fire({
+        icon: "success",
+        title: "Cambios guardados"
+    });
+})
+
+/*usrNicknm.addEventListener("input", () => {
+    let newValue = usrNicknm.value;
+    NcNameChng.forEach(element => {
+        element.textContent = newValue
+    })
+
+    if (usrNicknm.value == "") {
+        NcNameChng.forEach(element => {
             element.textContent = "Name"
         })
     }
 
     localStorage.setItem("nickname", newValue)
-})
+})*/

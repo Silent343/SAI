@@ -18,12 +18,22 @@ window.addEventListener("DOMContentLoaded", () => {
     const savedNameUsr = localStorage.getItem("nameUsr");
     const savedEmail = localStorage.getItem("email");
 
+    let validNickName = "";
+
     if(savedNickName) {
         usrNicknm.value = savedNickName;
+        validNickName = savedNickName;
         NcNameChng.forEach(element => {
             element.textContent = savedNickName;
         })
     }
+
+    if (validNickName == "" && savedNameUsr){
+        NcNameChng.forEach(element => {
+            element.textContent = savedNameUsr;
+        })
+    }
+
     if (savedNameUsr) {
         usrName.value = savedNameUsr;
     }
@@ -139,6 +149,16 @@ btnSvDtAcct.addEventListener("click", () => {
         icon: "success",
         title: "Cambios guardados"
     });
+})
+
+const resetPht = document.querySelector("#resetPhoto")
+
+resetPht.addEventListener("click", () =>{
+    img.src = defaultFile;
+    img1.src = defaultFile;
+    img2.src = defaultFile;
+
+    localStorage.setItem("general-img", defaultFile)
 })
 
 /*usrNicknm.addEventListener("input", () => {

@@ -3,10 +3,20 @@ let img = document.getElementById("imgPerfil3")
 
 window.addEventListener("DOMContentLoaded", () => {
     const savedNickName = localStorage.getItem("nickname");
+    const savedName = localStorage.getItem("nameUsr");
     const savedImgProfile = localStorage.getItem("general-img")
+
+    let validNickName = "";
+
     if(savedNickName){
         usrName.textContent = savedNickName;
+        validNickName = savedNickName;
     }
+
+    if(validNickName == "" && savedName){
+        usrName.textContent = savedName;
+    }
+
     if(savedImgProfile){
         img.src = savedImgProfile;
         img.style.backgroundColor = "#ebecf0a2";
@@ -58,6 +68,7 @@ const ttlMain = document.querySelector(".iaTitle")
 
 btnAddChat.addEventListener("click", () =>{
     ttlMain.classList.add("invisible")
+    const txtTr = txtChat.value;
 
     const chatGlove = document.createElement("DIV")
     const pGlove = document.createElement("P")
@@ -72,12 +83,23 @@ btnAddChat.addEventListener("click", () =>{
     chatGlove.classList.add("gloveDec")
     container.appendChild(chatGlove);
 
-    txtChat.value = "";
-
     const iaGlove = document.createElement("DIV")
     const pIaGlove = document.createElement("P")
     const imgIaGlove = document.createElement("IMG");
-    const txtIaShow = document.createTextNode("...")
+
+    let answr = "...";
+
+    if (txtTr.includes("ola")) {
+        answr = "Hola, en que podría ayudarte ?"
+    }
+    else if (txtTr.includes("Cuál es tu nombre") || txtTr.includes("Cómo te llamas")) {
+        answr = "Me llamo SAI, soy una IA que t ayudará a ver las diversas enfermedades que te pueden asechar"
+    }
+    else if((txtTr.includes("preguntar") || txtTr.includes("preguntarte") || txtTr.includes("pregunta")) && txtTr.includes("puedo")){
+        answr = "Sí claro, en que puedo ayudarte ?"
+    }
+
+    const txtIaShow = document.createTextNode(answr)
 
     imgIaGlove.classList.add(".imgGlovex")
     imgIaGlove.src = "../imgLogo/pixelcut-export.png";
@@ -89,4 +111,5 @@ btnAddChat.addEventListener("click", () =>{
     iaGlove.classList.add("gloveDecAi")
     container.appendChild(iaGlove);
 
+    txtChat.value = "";
 })

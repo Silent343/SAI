@@ -27,7 +27,8 @@ body{
     grid-template-areas: 
     "header "
     "main";
-    background-image: linear-gradient(200deg, rgba(171, 171, 171,0.05) 0%, rgba(171, 171, 171,0.05) 23%,rgba(90, 90, 90,0.05) 23%, rgba(90, 90, 90,0.05) 48%,rgba(65, 65, 65,0.05) 48%, rgba(65, 65, 65,0.05) 61%,rgba(232, 232, 232,0.05) 61%, rgba(232, 232, 232,0.05) 100%),linear-gradient(126deg, rgba(194, 194, 194,0.05) 0%, rgba(194, 194, 194,0.05) 11%,rgba(127, 127, 127,0.05) 11%, rgba(127, 127, 127,0.05) 33%,rgba(117, 117, 117,0.05) 33%, rgba(117, 117, 117,0.05) 99%,rgba(248, 248, 248,0.05) 99%, rgba(248, 248, 248,0.05) 100%),linear-gradient(144deg, rgba(64, 64, 64,0.05) 0%, rgba(64, 64, 64,0.05) 33%,rgba(211, 211, 211,0.05) 33%, rgba(211, 211, 211,0.05) 50%,rgba(53, 53, 53,0.05) 50%, rgba(53, 53, 53,0.05) 75%,rgba(144, 144, 144,0.05) 75%, rgba(144, 144, 144,0.05) 100%),linear-gradient(329deg, rgb(58,100,114),rgb(58,100,114));
+    background-image: linear-gradient(67.5deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(90deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(135deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(0deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(90deg, rgb(8, 8, 8),rgb(221, 221, 221)); background-blend-mode:overlay,overlay,overlay,overlay,normal;
+    background-image: radial-gradient(circle at 99% 33%, rgba(162,209,173, 0.1) 0%, rgba(162,209,173, 0.1) 37%,transparent 37%, transparent 100%),radial-gradient(circle at 46% 16%, rgba(162,209,173, 0.1) 0%, rgba(162,209,173, 0.1) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 99% 25%, rgba(162,209,173, 0.1) 0%, rgba(162,209,173, 0.1) 22%,transparent 22%, transparent 100%),radial-gradient(circle at 57% 88%, rgba(162,209,173, 0.1) 0%, rgba(162,209,173, 0.1) 86%,transparent 86%, transparent 100%),radial-gradient(circle at 82% 78%, rgba(162,209,173, 0.1) 0%, rgba(162,209,173, 0.1) 22%,transparent 22%, transparent 100%),linear-gradient(90deg, rgb(6,63,62),rgb(6,63,62));
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -82,6 +83,37 @@ header nav .txt_nav .infoTxt li{
         margin: 6px;
     }
 }
+
+header nav div  {
+    .linkA1:hover::after, 
+    .linkA3:hover::after,
+    .linkA4:hover::after{
+        content: ' ';
+        position: absolute;
+        margin-top: 22px;
+        margin-left: -2%;
+        width: 2%;
+        height: 0.5%;
+        border-radius: 20px;
+        background-color: #56247e;
+    }
+
+    .linkA4:hover::after{
+        margin-top: 6%;
+        width: 15% !important;
+        height: 6%;
+        margin-left: -15%;
+    }
+
+    .linkA3:hover::after{
+        margin-top: 6%;
+        width: 18%;
+        height: 6%;
+        margin-left: -18%;
+    }
+}
+
+
 
 .fa-play,
 .fa-bars-staggered,
@@ -555,7 +587,7 @@ section:nth-child(2){width: 70%;}
 }
 
 .wave-group .label{
-    color: #999;
+    color: #7c7878;
     font-size: 18px;
     font-weight: normal;
     position: absolute;

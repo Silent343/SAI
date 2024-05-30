@@ -117,105 +117,87 @@ header{
 
 /************************************************/
 
-.mainMedic{
-    margin-top: 5.5%;
+.sectNews{
+    padding: 1%;
+    margin-top: 6%;
+    display: flex;
     text-align: center;
+    font-size: 150%;
+    flex-direction: column;
 }
 
-.mdcPrfl{
+.linkToMpSc{
+    margin: 3% 0;
     display: flex;
     flex-direction: row;
-    position: relative;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.mapBxLn{
+    display: flex;
     justify-content: center;
-    padding: 2%;
-
-    h1{
-        font-size: 300%;
-        margin-left: 8%;
-    }
-    svg{
-        right: 4%;
-        position: absolute;
-        width: 20%!important;
-        height: auto;
-    }
-}
-
-.box-ctn-info1{
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
 }
 
-.box-Info{
-    border-radius: 20px;
-    margin: auto;
-    height: 50%;
-    width: 50%;
-    border: 1px solid #fff;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: #bdbdc283;
-    margin-bottom: 5%;
+.mapBxLn{
+    align-items: center;
 
-    .boxFl{
-        --padng: 3.5%;
-        margin-top: 4%;
-        display: flex;
-        flex-direction: row;
-        padding: 0 var(--padng) var(--padng) var(--padng);
-    }
-}
-
-.boxFl img{
-    width: 25%;
-    border-radius: 20%;
-    border: 2px solid #000;
-    filter: grayscale(90%);
-    transition: 0.3s;
-}
-
-.boxFl img:hover,
-.boxFl img:active{
-    filter: grayscale(0%);
-}
-
-
-.txtFl{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    margin-left: 20px;
-
-    .ttl-box{
+    label{
         font-weight: bolder;
-        text-decoration: underline;
-        color: #0e0633;
     }
-}
 
-.box-Info span::before{
-    content: ' ';
-    position: absolute;
-    width: 90%;
-    left: 5%;
-    margin-top: 1%;
-    height: 2px;
-    border-top: 2px dashed black;
-}
-
-.arrowCtn{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-
-    i{
+    input{
         cursor: pointer;
+        padding: 4%;
+        width: 50%;
+        border-radius: 30px;
+    }
+
+    small{
+        font-size: 50%;
+        margin-bottom: 10%;
     }
 }
+
+.mapBxLn input:hover{
+    background-color: #dbd7d7bb;
+}
+
+.mapBxLn input:focus{
+    outline: none;
+}
+
+.mapCt{
+    border-radius: 20px;
+    outline: 2px solid #000;
+}
+
+.yellowBll{
+    position: absolute;
+    background-color: #b9b60957;
+    width: 4%;
+    height: 8%;
+    right: 15%;
+    top: 60%;
+    border-radius: 99999px;
+}
+
+.yellowBll:nth-child(2){
+    top: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*footer*/
@@ -401,7 +383,26 @@ header{
 
     /*/***/
 
-    
+    .sectNews{
+        margin-top: 25%;
+    }
+
+    .linkToMpSc{
+        iframe{
+            width: 80%;
+            margin-top: 12%;
+        }
+    }
+
+    .mapBxLn{
+        margin-top: 5%;
+        label{
+            font-size: 80%;
+        }
+        small{
+            width: 80%;
+        }
+    }
 
     /*/*//****//***/
 

@@ -167,7 +167,7 @@ function getHour(){
     }
 
     for (let i = 0; i <= 24; i++) {
-        let mmt = dateAct.startsWith(i);
+        let mmt = parseInt(dateAct[0] + dateAct[1]);
         if (mmt >= 0 && mmt <= 11) {
             dateAct += " a.m."
             break;
@@ -290,6 +290,9 @@ const comentsReturn = document.querySelector(".headArr")
 const bxTxtTrCmnt = document.querySelector(".comentTxtBx")
 const txtTrCmnt = document.querySelector(".txtWriteCmt")
 const btnSendCmnt = document.querySelector(".incCtnCmt")
+const planBtn = document.querySelector(".instPlan")
+const planSect = document.querySelector(".planVIP-ctn")
+const planReturn = document.querySelector(".fa-x")
 
 comentsBtn.addEventListener("click", () =>{
     comentsSect.classList.add("backSectTw")
@@ -306,4 +309,12 @@ txtTrCmnt.addEventListener("click", () =>{
 btnSendCmnt.addEventListener("click", () =>{
     txtTrCmnt.value = ""
     bxTxtTrCmnt.classList.toggle("xdCmt")
+})
+
+planBtn.addEventListener("click", () =>{
+    planSect.classList.add("backSectOth")
+})
+
+planReturn.addEventListener("click", () =>{
+    planSect.classList.remove("backSectOth")
 })

@@ -177,8 +177,7 @@ header{
     transition: 0.3s;
 }
 
-.boxFl img:hover,
-.boxFl img:active{
+.boxFl:hover > img{
     filter: grayscale(0%);
 }
 
@@ -216,6 +215,18 @@ header{
         cursor: pointer;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*footer*/

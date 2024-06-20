@@ -24,11 +24,14 @@ body{
     display: grid;
     max-width: 100vw;
     height: 100vh;
-    overflow: hidden;
     grid-template-areas: 
     "header header header section"
     "main main main section";
     transition: 0.2s;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 

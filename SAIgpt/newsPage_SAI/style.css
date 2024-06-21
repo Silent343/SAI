@@ -25,12 +25,10 @@ body{
     height: 100vh!important;
     overflow-x: hidden;
     grid-template-areas: 
-    "header "
+    "header"
     "main";
     background-image: linear-gradient(67.5deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(90deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(135deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(0deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 6%,rgb(29, 29, 29) 6%, rgb(29, 29, 29) 57%,rgb(52, 52, 52) 57%, rgb(52, 52, 52) 58%,rgb(75, 75, 75) 58%, rgb(75, 75, 75) 79%,rgb(97, 97, 97) 79%, rgb(97, 97, 97) 93%,rgb(120, 120, 120) 93%, rgb(120, 120, 120) 95%,rgb(143, 143, 143) 95%, rgb(143, 143, 143) 100%),linear-gradient(90deg, rgb(8, 8, 8),rgb(221, 221, 221)); background-blend-mode:overlay,overlay,overlay,overlay,normal;
     background-image: radial-gradient(circle at 99% 33%, rgba(162,209,173, 0.1) 0%, rgba(162,209,173, 0.1) 37%,transparent 37%, transparent 100%),radial-gradient(circle at 46% 16%, rgba(162,209,173, 0.1) 0%, rgba(162,209,173, 0.1) 43%,transparent 43%, transparent 100%),radial-gradient(circle at 99% 25%, rgba(162,209,173, 0.1) 0%, rgba(162,209,173, 0.1) 22%,transparent 22%, transparent 100%),radial-gradient(circle at 57% 88%, rgba(162,209,173, 0.1) 0%, rgba(162,209,173, 0.1) 86%,transparent 86%, transparent 100%),radial-gradient(circle at 82% 78%, rgba(162,209,173, 0.1) 0%, rgba(162,209,173, 0.1) 22%,transparent 22%, transparent 100%),linear-gradient(90deg, rgb(6,63,62),rgb(6,63,62));
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
@@ -72,10 +70,9 @@ header nav .txt_nav .infoTxt li{
         height: 30px;
         border-radius: 50%;
     }
-    .profileTxt{
-        font-weight: bolder;
+    p, a{
         align-content: center;
-        margin-left: 5px;
+        margin-left: 3px;
         letter-spacing: 0.5px;
     }
     i{
@@ -91,25 +88,25 @@ header nav div  {
         content: ' ';
         position: absolute;
         margin-top: 22px;
-        margin-left: -2%;
-        width: 2%;
+        margin-left: -8%;
+        width: 8.5%;
         height: 0.5%;
         border-radius: 20px;
         background-color: #56247e;
     }
 
     .linkA4:hover::after{
-        margin-top: 6%;
-        width: 15% !important;
-        height: 6%;
-        margin-left: -15%;
+        margin-top: 12%;
+        width: 35% !important;
+        height: 2%;
+        margin-left: -32%;
     }
 
     .linkA3:hover::after{
-        margin-top: 6%;
-        width: 18%;
-        height: 6%;
-        margin-left: -18%;
+        margin-top: 12%;
+        width: 38%;
+        height: 2%;
+        margin-left: -38%;
     }
 }
 
@@ -216,6 +213,136 @@ header nav .txt_nav .infoTxt .profileTxt{
 }
 
 
+
+
+
+
+
+
+
+
+
+/************************************************************/
+
+button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #725AC1;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #725AC1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+button:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+
+/******************************************/
+
+.brtsCtn{
+    position: relative;
+}
+
+.emerBls{
+    position: absolute;
+}
+
+.emerBls .blls{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.emerBls:nth-child(1){
+    top: 18%;
+    right: 6%;
+
+    .blls{
+        border-radius: 999999999px;
+        background-color: #b8a11ca6;
+    }
+}
+
+.infor{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1%;
+    width: 15%;
+    margin-top: -12%;
+    margin-left: -5%;
+    border: 1px solid #000;
+    position: fixed;
+    display: none;
+
+    .perflRpt{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        div{
+            font-size: 19px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+
+    h3{
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+}
+
+.perflRpt div p:nth-child(2){
+    font-size: 12px;
+}
+
+.infor .imgReprt{
+    width: 20%;
+    border-radius: 999999999px;
+}
+
+.emerBls:nth-child(2){
+    top: 40%;
+    left: 10%;
+
+    .blls{
+        border-radius: 999999999px;
+        background-color: #a0471eb7;
+    }
+}
+
+.emerBls:nth-child(3){
+    top: 55%;
+    right: 20%;
+
+    .blls{
+        border-radius: 999999999px;
+        background-color: #b8a11ca6;
+    }
+}
+
+
+
 @media (max-width: 767px){
 
     .first-list{
@@ -238,11 +365,37 @@ header nav .txt_nav .infoTxt .profileTxt{
             margin-left: 30%;
         }
         height: 10pc;
-        a{
+        p, a{
             color: #000;
         }
         i{
             color: #640909;
+        }
+    }
+
+    header nav div  {
+        .linkA1 a:hover::after, 
+        .linkA1 a.active::after,
+        .linkA3 a:hover::after,
+        .linkA4 a:hover::after{
+            margin-left: -8%;
+            width: 8%;
+        }
+    
+        .linkA4 a:hover::after,
+        .linkA4 a.active{
+            margin-top: 11%;
+            width: 36% !important;
+            height: 2%;
+            margin-left: -34%;
+        }
+    
+        .linkA3 a:hover::after,
+        .linkA3 a.active{
+            margin-top: 11%;
+            width: 40% !important;
+            height: 2%;
+            margin-left: -40%;
         }
     }
 
@@ -264,8 +417,9 @@ header nav .txt_nav .infoTxt .profileTxt{
     }
 
     .first_ctn{
+        padding-top: 3%;
         img{
-            margin-top: 8px;
+            margin-top: 5%;
         }
     }
 
@@ -306,7 +460,7 @@ header nav .txt_nav .infoTxt .profileTxt{
         /*/***/
 
         .sectNews{
-            margin-top: -5%;
+            margin-top: 4%;
         }
     
         .linkToMpSc{
@@ -326,7 +480,49 @@ header nav .txt_nav .infoTxt .profileTxt{
             }
         }
     
-        /*/*//****//***/
+    /*/*//****//***/
+
+    .emerBls .blls{
+        width: 40px;
+        height: 40px;
+    }
+
+    .emerBls:nth-child(1){
+        top: 12%;
+        right: 18%;
+    }
+
+    .infor{
+        width: 12pc;
+        margin-top: -37%!important;
+        margin-left: -18%;
+        border: 1px solid #000;
+        position: fixed;
+        display: none;
+
+        .perflRpt{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            div{
+                font-size: 19px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+        }
+
+        h3{
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+    }
+
 }
 
 .bringBack{
@@ -340,3 +536,12 @@ header nav .txt_nav .infoTxt .profileTxt{
 .blockft{
     left: 71.8%;
 }
+
+.visible{
+    display: block;
+}
+
+.invisible{
+    display: none;
+}
+

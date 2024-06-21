@@ -1,5 +1,6 @@
 iframe = document.querySelector(".mapCt")
 inputMap = document.querySelector("#browser")
+const placeRpt = document.querySelectorAll(".placeReport")
 
 const url = {
     "San Miguel" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15605.948528720959!2d-77.10183978626675!3d-12.078767477840286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c964223bb347%3A0x2013e50c7a7d23d4!2sSan%20Miguel!5e0!3m2!1ses!2spe!4v1717034296464!5m2!1ses!2spe",
@@ -12,10 +13,27 @@ const url = {
 
 inputMap.addEventListener("change", () => {
     const selectVal = inputMap.value
-    if (url[selectVal]) 
+    if (url[selectVal]) {
         iframe.src = url[selectVal]
+        for (let i = 0; i < placeRpt.length; i++) {
+            placeRpt[i].innerHTML = ""
+            placeRpt[i].appendChild(document.createTextNode(selectVal))
+            inputMap.value = "";
+        }
+    }
     else
         iframe.src = url["San Miguel"]
 
     inputMap.value = "";
 })
+
+const emergencyBll = document.querySelectorAll(".blls")
+const infoBll = document.querySelectorAll(".infor")
+
+for (let i = 0; i < emergencyBll.length; i++) 
+    emergencyBll[i].addEventListener("click", () => {
+        infoBll[i].classList.toggle("visible")
+        window.addEventListener("scroll", function(){
+            infoBll[i].classList.remove("visible")
+        })
+    })

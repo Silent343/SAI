@@ -538,10 +538,7 @@ header{
     }
     
     .svgCtn svg{
-        position: absolute;
-        width: 20pc;
-        bottom: 0;
-        right: 3%;
+        width: 12pc;
     }
     
 

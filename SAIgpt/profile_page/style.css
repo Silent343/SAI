@@ -72,10 +72,9 @@ header nav .txt_nav .infoTxt li{
         height: 30px;
         border-radius: 50%;
     }
-    .profileTxt{
-        font-weight: bolder;
+    p, a{
         align-content: center;
-        margin-left: 5px;
+        margin-left: 3px;
         letter-spacing: 0.5px;
     }
     i{
@@ -813,10 +812,62 @@ section:nth-child(2){width: 70%;}
     }
 
     .first_ctn{
+        padding-top: 3%;
         img{
-            margin-top: 8px;
+            margin-top: 5%;
         }
     }
+
+    header nav .txt_nav .infoTxt li{
+        list-style: none;
+        display: inline-block;
+        display: flex;
+        padding: 2%;
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        p, a{
+            align-content: center;
+            margin-left: 3px;
+            letter-spacing: 0.5px;
+        }
+        i{
+            align-content: center;
+            margin: 6px;
+        }
+    }
+    
+    header nav div  {
+        .linkA1:hover::after, 
+        .linkA3:hover::after,
+        .linkA4:hover::after{
+            content: ' ';
+            position: absolute;
+            margin-top: 22px;
+            margin-left: -8%;
+            width: 8.5%;
+            height: 0.5%;
+            border-radius: 20px;
+            background-color: #56247e;
+        }
+    
+        .linkA4:hover::after{
+            margin-top: 12%;
+            width: 35% !important;
+            height: 2%;
+            margin-left: -32%;
+        }
+    
+        .linkA3:hover::after{
+            margin-top: 12%;
+            width: 38%;
+            height: 2%;
+            margin-left: -38%;
+        }
+    }
+    
 
     .prflIfn_cnt,
     .all-Info-ctn{

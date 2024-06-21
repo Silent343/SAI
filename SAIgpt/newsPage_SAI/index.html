@@ -153,6 +153,15 @@
                     img.style.boxShadow = "inset 0 0 0 1px rgba(57,76,96,.15)"
                 }
             })
+
+            
+            window.addEventListener("scroll", function(){
+                const navMenu = document.querySelector(".first-list")
+                const backNavBar = document.querySelector(".nav-container")
+                navMenu.classList.remove("blockft", window.scrollY > 0)
+                backNavBar.classList.remove("bckScroll", window.scrollY > 0)
+            })
+
         </script>
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

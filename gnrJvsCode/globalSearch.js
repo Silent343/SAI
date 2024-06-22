@@ -37,3 +37,6 @@ for (let i = 0; i < emergencyBll.length; i++)
             infoBll[i].classList.remove("visible")
         })
     })
+
+
+    

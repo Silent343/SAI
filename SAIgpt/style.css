@@ -81,7 +81,7 @@ header nav .txt_nav .infoTxt li{
 
 .fa-play,
 .fa-bars-staggered,
-.fa-newspaper{
+.fa-map{
     color: #ffecd1;
 }
 
@@ -112,17 +112,17 @@ header nav div  {
     .linkA4 a:hover::after,
     .linkA4 a.active{
         margin-top: 6%;
-        width: 20% !important;
+        width: 16% !important;
         height: 6%;
-        margin-left: -19%;
+        margin-left: -15%;
     }
 
     .linkA3 a:hover::after,
     .linkA3 a.active{
         margin-top: 6%;
-        width: 18%;
+        width: 15%;
         height: 6%;
-        margin-left: -18%;
+        margin-left: -13%;
     }
 }
 

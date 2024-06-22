@@ -77,7 +77,7 @@ backArrow.addEventListener("click", () =>{
 
 const sectPnl = "section"
 let interNum = 0
-
+let interPnm = 0
 
 const container = document.querySelector(".pnlAi")
 const btnAddChat = document.querySelector(".incCtn")
@@ -122,13 +122,10 @@ btnAddChat.addEventListener("click", () =>{
     }
 
 
-    const txtIaShow = document.createTextNode(answr)
-
-    imgIaGlove.classList.add(".imgGlovex")
+    imgIaGlove.classList.add("imgGlovex")
     imgIaGlove.src = "../imgLogo/pixelcut-export.png";
-    pIaGlove.classList.add(".txtGlove")
+    pIaGlove.classList.add("txtGlove" + interPnm.toString())
 
-    pIaGlove.appendChild(txtIaShow)
     iaGlove.appendChild(imgIaGlove)
     iaGlove.appendChild(pIaGlove)
     iaGlove.classList.add("gloveDecAi")
@@ -141,8 +138,27 @@ btnAddChat.addEventListener("click", () =>{
     arrPnl.push(iaGlove)
 
     txtChat.value = "";
+
+    writeCharByChar(answr, interPnm)
+    interPnm++
 })
 
+const writeCharByChar = (strng, clasN) => {
+    const pIaGlove = document.querySelector(".txtGlove" + clasN);
+    const wrd = strng
+    let nro = 0
+
+    let interval = setInterval(() => {
+        if (nro < wrd.length) { 
+            let txt = document.createTextNode(strng.charAt(nro))
+            console.log(strng.charAt(nro))
+            pIaGlove.appendChild(txt)
+            nro++;
+        }
+        else
+            clearInterval(interval)
+    }, 100)
+}
 
 
 

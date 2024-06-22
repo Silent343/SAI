@@ -74,6 +74,7 @@ const acctPag = document.querySelector("#account-general")
 const passPag = document.querySelector("#account-change-password")
 const apkPag = document.querySelector("#account-aplication")
 const ntfcPag = document.querySelector("#account-notifications")
+const logOut = document.querySelector(".crStn")
 
 const acctLink = document.querySelector(".accntCtn")
 const passLink = document.querySelector(".pwrdCtn")
@@ -113,6 +114,30 @@ for (let i = 0; i < arrPagChng.length; i++) {
 }
 
 const btnSvDtAcct = document.querySelector("#saveFirstData")
+
+logOut.addEventListener("click", () => {
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 1000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+        }
+    });
+    Toast.fire({
+        icon: "success",
+        title: "Cerrando Sesión"
+    });
+    const url = "../../index.html";
+    const standBy = 1000; 
+        setTimeout(() =>{
+            window.open(url, '_self');
+        }, standBy)
+})
+
 
 btnSvDtAcct.addEventListener("click", () => {
     /***/

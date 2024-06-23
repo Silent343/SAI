@@ -377,6 +377,9 @@ const chatAiModel = (sentence) => {
     else if (sentence.includes("Cuáles son las medidas preventivas contra el dengue") || sentence.includes("Cómo prevenir el dengue")) {
         respt = "Para prevenir el dengue, evita las picaduras de mosquitos usando repelente, instalando mosquiteros y eliminando lugares donde los mosquitos puedan reproducirse, como recipientes con agua estancada.";
     } 
+    else if (sentence.includes("Qué es el dengue") || sentence.includes("Que es el dengue") || sentence.includes("Que es el dengue")) {
+        respt = "El dengue es una infección vírica que se transmite de mosquitos a personas. Es más frecuente en las regiones de climas tropicales y subtropicales.";
+    } 
     else if (sentence.includes("Qué es el VIH") || sentence.includes("Qué es el SIDA")) {
         respt = "El VIH (Virus de la Inmunodeficiencia Humana) es un virus que ataca el sistema inmunológico. Si no se trata, puede llevar al SIDA (Síndrome de Inmunodeficiencia Adquirida), una etapa avanzada de la infección por VIH.";
     } 

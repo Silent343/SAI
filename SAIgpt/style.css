@@ -332,7 +332,6 @@ main .txtBox_ctn .txtBox{
 .gloveDecAi{
     margin: 3% 4% 4% 4%;
     justify-content: end;
-    
     img{
         background-color: #ffffff;
     }
@@ -844,6 +843,7 @@ main .txtBox_ctn .txtBox{
     height: 100%;
     z-index: 100000000;
     left: 100%;
+    overflow-y: auto;
 
     transition: left 0.7s;
 
